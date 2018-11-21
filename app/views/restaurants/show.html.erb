@@ -1,0 +1,31 @@
+<div class="home-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+          <div class="wrap">
+              <h4><%=  @restaurant.name %></h4>
+              <p><%=  @restaurant.address %><p>
+              <%=  @restaurant.phone_number %>
+              <p><%=  @restaurant.category %><p>
+              <p><%= link_to "Write review", new_restaurant_review_path(@restaurant) %></p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="home-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+            <h4> Reviews </h4>
+            <%@reviews.each do |review| %>
+          <div class="wrap">
+              <p><strong>Opinion:</strong> <br> <%= review.content %></p>
+              <p><strong>Rating:</strong> <br><%= review.rating %></p>
+            </div>
+            <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <img src="https://kunstblik.files.wordpress.com/2017/05/ajax-logo-oud.jpg" alt="logo">
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+<%= link_to "All restaurants", root_path, class: 'navbar-wagon-item navbar-wagon-link' %>
+<%= link_to "New restaurant", new_restaurant_path, class: 'navbar-wagon-item navbar-wagon-link' %>
+
+    <!-- Profile picture with dropdown list -->
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><%= link_to "All restaurants", root_path %></li>
+        <li><%= link_to "New restaurants", new_restaurant_path %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+

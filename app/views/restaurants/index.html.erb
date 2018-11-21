@@ -1,0 +1,14 @@
+<div class="home-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <ul>
+          <% @restaurants.each do |restaurant| %>
+          <li><%= link_to restaurant.name, restaurant_path(restaurant)%></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
