@@ -14,7 +14,7 @@ Restaurant.destroy_all
       name: Faker::Food.dish,
       address: Faker::Address.city,
       phone_number: Faker::PhoneNumber.cell_phone,
-      category: ['Chinese', 'Italian', 'Japanese', 'French', 'Belgian'].sample
+      category: Restaurant::CATEGORY.sample
     )
   resto.save
 
